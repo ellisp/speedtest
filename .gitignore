@@ -2,3 +2,4 @@ __pycache__
 # test-results.csv
 speed-log
 .Rproj.user
+.Rhistory
