@@ -1,6 +1,8 @@
 library(tidyverse)
 library(scales)
 
+system("git pull origin master")
+
 speeds <- read_csv("test-results.csv")
 
 speeds %>%
