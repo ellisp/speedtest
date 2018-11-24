@@ -12,7 +12,13 @@ import pyspeedtest
 import csv
 import time
 import datetime
+import os
 
+os.chdir('/home/peter/Documents/speedtest/')
+
+
+ts = datetime.datetime.fromtimestamp(time.time()).isoformat()
+print("start:", ts)
 
 try:
     st = pyspeedtest.SpeedTest()
@@ -26,10 +32,10 @@ except:
 
 ts = datetime.datetime.fromtimestamp(time.time()).isoformat()
 
-f = open('/home/peter/Documents/speedtest/test-results.csv', 'a')
+f = open('test-results.csv', 'a')
 with f:
     writer = csv.writer(f)
     writer.writerow([x, y, z, ts])
 
 # Print to the log file
-print(ts)
+print("finish:", ts)
