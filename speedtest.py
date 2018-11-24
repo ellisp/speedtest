@@ -7,14 +7,14 @@ See https://stackoverflow.com/questions/50999879/pyspeedtest-cannot-find-test-se
 
 @author: peter
 """
+import os
+os.chdir('/home/peter/Documents/speedtest/')
 
 import pyspeedtest
 import csv
 import time
 import datetime
-import os
 
-os.chdir('/home/peter/Documents/speedtest/')
 
 
 ts = datetime.datetime.fromtimestamp(time.time()).isoformat()
@@ -39,3 +39,7 @@ with f:
 
 # Print to the log file
 print("finish:", ts)
+
+os.system('git add test-results.csv')
+os.system('git commit -m "more data"')
+os.system('git push origin master')
