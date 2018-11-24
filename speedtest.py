@@ -12,9 +12,7 @@ import pyspeedtest
 import csv
 import time
 import datetime
-import os
 
-os.chdir("/home/peter/Documents/speedtest/")
 
 try:
     st = pyspeedtest.SpeedTest()
@@ -26,11 +24,10 @@ except:
     y = float('inf')
     z = float('inf')
 
-print(z)
 
 ts = datetime.datetime.fromtimestamp(time.time()).isoformat()
 
-f = open('test-results.csv', 'a')
+f = open('/home/peter/Documents/speedtest/test-results.csv', 'a')
 with f:
     writer = csv.writer(f)
     writer.writerow([x, y, z, ts])
