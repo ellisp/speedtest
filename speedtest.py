@@ -21,9 +21,8 @@ try:
     z = st.upload()
 except:
     x = float('inf')
-    y = float('inf')
-    z = float('inf')
-
+    y = 0
+    z = 0
 
 ts = datetime.datetime.fromtimestamp(time.time()).isoformat()
 
@@ -32,3 +31,5 @@ with f:
     writer = csv.writer(f)
     writer.writerow([x, y, z, ts])
 
+# Print to the log file
+print(ts)
