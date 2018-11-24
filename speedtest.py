@@ -42,4 +42,5 @@ print("finish:", ts)
 
 os.system('git add test-results.csv')
 os.system('git commit -m "more data"')
+os.system('git pull origin master')
 os.system('git push origin master')
