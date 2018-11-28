@@ -9,6 +9,7 @@ See https://stackoverflow.com/questions/50999879/pyspeedtest-cannot-find-test-se
 """
 import os
 os.chdir('/home/peter/Documents/speedtest/')
+os.system('git pull origin master')
 
 import pyspeedtest
 import csv
@@ -42,5 +43,4 @@ print("finish:", ts)
 
 os.system('git add test-results.csv')
 os.system('git commit -m "more data"')
-os.system('git pull origin master')
 os.system('git push origin master')
